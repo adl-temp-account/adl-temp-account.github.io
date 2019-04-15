@@ -8,11 +8,13 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'Alice was beginning to get very tired of sitting by her sister on the bank.',
+      'And then there was such comfort in the very easy distance of Randalls from Hartfield',
   'example2':
-      'Buda-Pesth seems a wonderful place.',
+      'Senit sounded. Enter Macbeth as King, Lady Lenox, Rosse, Lords, and Attendants.',
   'example3':
-      'Scepticism was as much the result of knowledge, as knowledge is of scepticism.'      
+      'And the numberless unknown heroes equal to the greatest heroes known',
+  'example4':
+      'We must burn the house down!’ said the Rabbit’s voice; and Alice called out as loud as she could, ‘If you do. I’ll set Dinah at you!'
 };
 
 function status(statusText) {
@@ -47,11 +49,11 @@ function doPredict(predict) {
   const result = predict(textField.value);
   score_string = "Class scores: ";
   for (var x in result.score) {
-    score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
+    score_string += x + " ->  " + result.score[x].toFixed(4) + ", "
   }
   //console.log(score_string);
   status(
-      score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)');
+      score_string + ' elapsed: ' + result.elapsed.toFixed(4) + ' ms)');
 }
 
 function prepUI(predict) {
